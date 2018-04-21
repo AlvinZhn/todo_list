@@ -1,0 +1,40 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Blog Detail
+{% endblock %}
+
+{% block main %}
+<div class="panel panel-primary" align="left">
+    <h1 id="id-blog-title" class="panel-heading anel-title"></h1>
+    <div id="id-blog-content" class="markdown-body panel-body"></div>
+</div>
+<div class="panel panel-success blogComment-list">
+    <h3 class="panel-heading anel-title" align="left">
+        评论：
+        <br>
+        <textarea autofocus id="id-input-content" class="blogComment-input form-control blogCommentForm" rows="4" cols="65"></textarea>
+        <button id="id-button-add" class="button-addBlogComment btn btn-info blogCommentForm">添加评论</button>
+    </h3>
+    <ul class="list-group panel-body blogCommentCell markdown-body" align="left">
+    </ul>
+</div>
+
+<script src='/static/js/ajax.js'></script>
+<script src='/static/js/blog_detail.js'></script>
+<script src='/static/js/blogComment_index.js'></script>
+<script src='/static/js/blogComment_new.js'></script>
+
+<!--  markdown js and css -->
+<link href="https://cdn.bootcss.com/github-markdown-css/2.8.0/github-markdown.css" rel="stylesheet">
+<!-- <link href='{{ url_for('static', filename='markdown.css') }}' rel="stylesheet"/> -->
+<script src="https://cdn.bootcss.com/marked/0.3.6/marked.min.js"></script>
+<!-- <script src="{{ url_for('static', filename='marked.min.js') }}"></script> -->
+
+<!--  markdown highlight -->
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<link href="https://cdn.bootcss.com/highlight.js/9.12.0/styles/monokai.min.css" rel="stylesheet">
+<script >marked.setOptions({ highlight: function (code) { return hljs.highlightAuto(code).value;}})</script>
+<script >hljs.initHighlightingOnLoad();</script>
+
+{% endblock %}

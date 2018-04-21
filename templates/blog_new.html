@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    New Blog
+{% endblock %}
+
+{% block main %}
+<fieldset>
+    <div class="form-group">
+        <input autocomplete="off" autofocus class="form-control" id="id-input-title" name="title" placeholder="标题" type="text"/>
+    </div>
+    <form role="form">
+    	<div class="form-group">
+            <textarea class="form-control" id="id-input-content" name="content" placeholder="正文" rows="10" cols="60"></textarea>
+    	</div>
+    </form>
+    <div class="form-group">
+        <button class="btn btn-info " id="id-button-add" type="submit">发表</button>
+    </div>
+</fieldset>
+
+<script src='/static/js/ajax.js'></script>
+<script src='/static/js/blog_new.js'></script>
+{% endblock %}

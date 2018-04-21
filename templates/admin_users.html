@@ -1,0 +1,41 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Administration
+{% endblock %}
+
+{% block main %}
+<h1><b>用户列表</b></h1>
+<table class="table table-striped ">
+<thead>
+    <tr>
+        <th>User ID</th>
+        <th>Username</th>
+        <th>Password</th>
+        <th>Confime User Id</th>
+        <th>New Password</th>
+        <th>Submit</th>
+    </tr>
+</thead>
+<tbody>
+    {% for user in user_list %}
+        <tr>
+            <td>{{ user.id }}</td>
+            <td>{{ user.username }}</td>
+            <td>{{ user.password }}</td>
+            <td>
+                <form action="{{ url_for('admin.update') }}" method="post" class="form-group">
+                    <input class="form-control" name="id" placeholder="请确认用户id" type="text"/>
+            </td>
+            <td>
+                    <input class="form-control" name="password" placeholder="请输入新密码" type="password"/>
+            </td>
+            <td>
+                    <button class="btn btn-success" type="submit">修改</button>
+                </form>
+            </td>
+        </tr>
+    {% endfor %}
+</tbody>
+</table>
+{% endblock %}

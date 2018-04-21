@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Todo
+{% endblock %}
+
+{% block main %}
+<h1><b>{{ username }} 的 TODO: </b></h1>
+
+<input class="form-control" id="id-input-todo" autofocus placeholder="请输入TODO">
+<button class="btn btn-info" id="id-button-add">New</button>
+<table class="table table-striped ">
+    <thead>
+        <tr>
+            <th>Content</th>
+            <th>Created Time</th>
+            <th>Updated Time</th>
+            <th>Buttons</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody class="todo-list">
+
+    </tbody>
+</table>
+<script src='/static/js/ajax.js'></script>
+<script src='/static/js/todo.js'></script>
+{% endblock %}

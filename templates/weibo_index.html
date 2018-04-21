@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Weibo
+{% endblock %}
+
+{% block main %}
+<h1 id="id-title"><b>{{ username }} 的 Weibo: </b></h1>
+
+<input class="form-control" id="id-input-weibo" autofocus placeholder="请输入Weibo">
+<button class="btn btn-info" id="id-button-add">写新微博</button>
+
+<h3 align='left'> Weibo-List:
+<button class="pull-right btn btn-xs btn-info" onclick="$('.panel-collapse').collapse('toggle')">
+    展开/折叠
+</button>
+</h3>
+
+<div class="weibo-list">
+
+</div>
+
+<script src='/static/js/ajax.js'></script>
+<script src='/static/js/weibo.js'></script>
+<script src='/static/js/comment.js'></script>
+
+{% endblock %}

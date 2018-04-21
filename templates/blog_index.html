@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Blog
+{% endblock %}
+
+{% block main %}
+<h1 id="id-title"><b>{{ username }} 的 Blog: </b></h1>
+
+<a href="{{ url_for('blog_view.new') }}" class="btn btn-info btn-lg" id="id-button-add"><b>发表新博客</b></a>
+<table class="table table-striped ">
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>Created Time</th>
+            <th>Updated Time</th>
+            <th>Buttons</th>
+        </tr>
+    </thead>
+    <tbody class="blog-list">
+
+    </tbody>
+</table>
+<script src='/static/js/ajax.js'></script>
+<script src='/static/js/blog_index.js'></script>
+{% endblock %}

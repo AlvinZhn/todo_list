@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Messages
+{% endblock %}
+
+{% block main %}
+        <form action="/messages/add" method="post">
+            <input name="message" class="form-control" placeholder="message">
+            <br>
+            <input name="author" class="form-control" placeholder="author">
+            <button type="submit" class="btn btn-info">POST 提交</button>
+        </form>
+        <form action="/messages" method="get">
+            <input name="message" class="form-control" placeholder="message">
+            <br>
+            <input name="author" class="form-control" placeholder="author">
+            <button type="submit" class="btn btn-info">GET 提交</button>
+        </form>
+        <div>
+            {% for msg in messages %}
+                <span class="messages">{{ msg }}</span>
+                <br>
+            {% endfor %}
+        </div>
+{% endblock %}
