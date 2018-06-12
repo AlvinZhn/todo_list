@@ -2,7 +2,7 @@
 
 ## 基于 Ajax 的 TodoList
 
-[Online Demo](https://zhangnie.me/#todo_list)
+<a href="https://zhangnie.me/#todo_list" target="_blank">Online Demo</a>
 
 - 基于 **XMLHttpRequest** 实现了对 **Ajax** 的封装
 - 采用 **原生 Javascript** 编写 **Ajax GET** 和 **POST** 请求, 并对 **API** 进行封装
