@@ -14,4 +14,4 @@
 
 ### Demo: 
 
-![avatar](https://wx4.sinaimg.cn/large/927e2755gy1frrhxjruskg22gw16sb2c.gif)
+![gif](https://wx4.sinaimg.cn/large/927e2755gy1frrhxjruskg22gw16sb2c.gif)
